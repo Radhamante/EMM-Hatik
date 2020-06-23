@@ -1,0 +1,559 @@
+
+@font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("assets/font/AvenirNextLT/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "MadeSoulMaze";
+    src: url("assets/font/MadeSoulMaze/MADE Soulmaze PERSONAL USE.otf") format("opentype");
+}
+
+:root {
+    --jaune: #e3ca30;
+    --noir: #202020;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: AvenirNextLTPro;
+}
+
+/* lazy-load */
+
+.lazy-load{
+    opacity: 0;
+    transition: opacity 1s;
+    will-change: opacity
+}
+
+.lazy-load.loaded{
+    opacity: 1;
+}
+
+/* reveal */
+
+.reveal{
+    transform: translateY(10vh);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0,0,0,1), opacity 1s;
+    will-change: transform, opacity;
+}
+.reveal.revealed{
+    transform: translateY(0vh);
+    opacity: 1
+}
+
+/* header */
+
+.header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 1vh;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+    font-size: 2vw;
+    transition: 0.3s
+}
+
+
+header img{
+    width: 40px
+}
+header nav{
+    display: flex;
+}
+header nav a{
+    margin: 0 1vw;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: AvenirNextLTPro
+}
+
+.headerSmall{
+    height: 8vh;
+    background-color: white;
+    font-size: 1.5vw
+}
+
+.logo{
+    width: 10vw;
+    margin-left: 5vw;
+    transition: 0.3s;
+    top: 20px;
+}
+.logoMobile{
+    position: fixed;
+    display: none;
+    width: 20vw;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+.headerSmall .logo{
+    width: 6vw
+}
+
+.slider{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/Page\ principale/Images/Header.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+.slider h1{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 7vw;
+    font-weight: bold;
+}
+.countDown{
+    margin-top: 55vh;
+    font-size: 4vw;
+    font-weight: bold;
+    background-image: url(assets/Page\ principale/Images/effetJaune.jpg);
+    background-size: cover;
+    padding: 1vw;
+    user-select: none;
+}
+.bigButton{
+    font-size: 2vw;
+    padding: 1vw 2vw;
+    border: 2px solid var(--jaune);
+    background-color: var(--jaune);
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-weight: bold;
+    width: max-content
+}
+.bigButton:hover{
+    background-color: white;
+    color: var(--jaune)
+}
+
+/***** part 2 *******/
+
+.part2{
+    background-image: url(assets/Page\ principale/Images/fondSite.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* A propos */
+
+.aPropos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10vh 4vw 0 4vw;
+    box-sizing: border-box;
+    
+}
+.aProposDes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%
+}
+.sectionTitle{
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 4vw;
+    margin-bottom: 10px;
+    font-family: MadeSoulMaze;
+    color: var(--jaune);
+    position: relative;
+}
+.aProposDes h3{
+    font-weight: 200;
+    font-size: 2vw;
+    text-transform: uppercase;
+    margin: 20px
+}
+.paragraphe{
+    text-align: center;
+    width: 80%;
+    font-size: 1.2vw;
+    color: white;
+}
+.paragraphe strong{
+    color: var(--jaune)
+}
+.aProposImgCtnr{
+    display: flex;
+    justify-content: space-between;
+    width: 85%
+}
+.aProposImgBig{
+    width: 49%;
+    border: 0.4vw solid white
+}
+.aProposImgCtnrSmall{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.aProposImgCtnrSmall img{
+    width: 97%;
+    border: 0.4vw solid white
+}
+.aProposImgCtnrSmall img::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: aqua;
+}
+
+/* Presentation */
+
+.pres{
+    display: flex; 
+    justify-content: center;
+    padding-top: 20vh;
+}
+.pres > div{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.presLeft, .presRight{
+    width: 47%
+}
+.presLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.presLeft p{
+    text-align: left;
+    margin-bottom: 4vh;
+    width: 100%
+}
+.presLeft h2{
+    font-style: italic;
+}
+.presRight img{
+    width: 100%
+}
+
+/* sound */
+
+.TrackList{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10vh 0;
+    align-items: center
+}
+.TrackListPochet{
+    width: 30vw;
+    height: 30vw;
+}
+.TrackListRight{
+    width: 60%
+}
+.TrackListShare{
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding: 1.5vh 0;
+    display: flex;
+    align-items: center;
+}
+.TrackListShare span{
+    color: white;
+    font-size: 1.5vw
+}
+.TrackListShare a {
+    margin: 0 0.7vw
+}
+.TrackListShare img {
+    height: 2vw;
+}
+.allAudio{
+    height: 30vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--jaune) white;
+    scrollbar-darkshadow-color: red;
+    padding-right: 0.5vw;
+    margin: 2vh 0;
+}
+
+.allAudio::-webkit-scrollbar {
+    width: 6px;
+}
+   
+.allAudio::-webkit-scrollbar-track {
+    background: white;
+}
+   
+.allAudio::-webkit-scrollbar-thumb {
+    background: var(--jaune);
+}
+
+.audio-player-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    color: white;
+    font-size: 1.4vw
+}
+  
+.audio-player-progressbar {
+    background-color: white;
+    width: 80%;
+    height: 1vh;
+    display: flex;
+    cursor: pointer;
+
+}
+
+.audio-player-progressmeter {
+    background-color: var(--jaune);
+    height: 1vh;
+}
+
+.audio-player {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5vh 0;
+}
+.audio-player button{
+    background: none;
+    border: none
+}
+
+.controlButtons{
+    width: 1.2vw;
+    height: 1.2vw;
+    cursor: pointer;
+}
+
+.lyricsLink{
+    width: max-content;
+    color: var(--jaune);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.audioTitre{
+    width: 25%;
+    color: white;
+    font-size: 1.1vw
+}
+
+/***** Part 3 ****/
+
+
+.tournée{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 5vh 0;
+    background-image: url(assets/Page\ principale/Images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.listeTournée{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-between
+}
+.oneEvent{
+    width: 50%;
+    display: flex;
+    border-bottom: 2px solid var(--noir);
+    align-items: center;
+    padding: 3vh 0
+}
+
+.date{
+    font-size: 1.7vw;
+    font-weight: 900;
+    font-family: MadeSoulMaze;
+    width: 20%
+}
+.lieu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    width: 25%
+}
+.ville{
+    font-weight: 600;
+    font-size: 1.2vw
+}
+.batiment{
+    font-weight: 200;
+    font-size: 1.2vw
+}
+.pays{
+    font-weight: 600;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    width: 25%
+}
+.reserver{
+    font-weight: 400;
+    font-size: 1.4vw;
+    text-transform: uppercase;
+    padding: 1vh 1vw;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    width: max-content;
+    font-family: MadeSoulMaze;
+    background-color: var(--jaune);
+    cursor: pointer;
+    transition: 0.2s
+}
+.reserver:hover{
+    background-color: white;
+    color: var(--jaune);
+    border: 2px solid var(--jaune)
+}
+
+/* news */
+.news{
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    justify-content: space-between;
+    color: white;
+    margin-top: 8vh
+}
+.newsSide{
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+.oneArticle{
+    background-image: url(assets/Page\ principale/Images/news2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 2vh 0 2vh 3vw;
+    margin: 2vh 0;
+}
+.oneArticle > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 3vw
+}
+.oneArticleDate{
+    font-family: MadeSoulMaze;
+    font-size: 4vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.oneArticleTitle{
+    font-size: 1.3vw;
+    margin: 0;
+    color: var(--jaune);
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.8vh;
+    font-family: MadeSoulMaze;
+
+}
+.oneArticlecontent{
+    padding-top: 0.8vh;
+    margin: 0
+}
+.oneArticleShare{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.5vh
+}
+.oneArticleShareJaune{
+    color: var(--jaune);
+    font-weight: bold;
+
+}
+.oneArticleShare a{
+    text-decoration: none;
+}
+.oneArticleShare a img{
+    height: 2vw;
+    transition: 0.3s
+}
+
+.newsRight{
+    background-image: url(assets/Page\ principale/Images/news1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 49%;
+    margin: 2vh 0;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(46, 46, 46);
+    padding: 5vh 0;
+    align-items: center;
+}
+footer img{
+    width: 10vw;
+}
+footer > div{
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer div h6{
+    color: var(--jaune);
+    font-size: 1.1vw;
+    margin: 2vh 0
+}
+footer p, footer a{
+    color: gray;
+    text-decoration: none;
+    font-size: 0.9vw;
+    margin: 0.4vh 0
+}

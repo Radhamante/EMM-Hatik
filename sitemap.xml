@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://lab-hatik.web.app/</loc>
+  <lastmod>2020-06-20T10:46:09+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://lab-hatik.web.app/pr%C3%A9sentation/</loc>
+  <lastmod>2020-06-20T10:46:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lab-hatik.web.app/articles/disque-d'or/</loc>
+  <lastmod>2020-06-20T10:46:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lab-hatik.web.app/articles/notori%C3%A9t%C3%A9/</loc>
+  <lastmod>2020-06-20T10:46:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lab-hatik.web.app/articles/%C3%A9dition-delux/</loc>
+  <lastmod>2020-06-20T10:46:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lab-hatik.web.app/articles/valid%C3%A9/</loc>
+  <lastmod>2020-06-20T10:46:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lab-hatik.web.app/articles/chaise-pliante-2/</loc>
+  <lastmod>2020-06-20T10:46:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

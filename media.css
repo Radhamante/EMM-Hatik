@@ -1,0 +1,117 @@
+@media (max-width: 750px) {
+
+    .header{
+        display: none
+    }
+    .logoMobile{
+        display: flex;
+    }
+    .sectionTitle{
+        font-size: 7vw;
+        text-align: center;
+    }
+    .bigButton{
+        font-size: 5vw;
+        padding: 3vw 5vw
+    }
+    .paragraphe{
+        font-size: 4vw;
+        width: 100%
+    }
+    .countDown{
+        font-size: 4vw
+    }
+    .headerSmall{
+        font-size: 2vw
+    }
+    .slider{
+        background-image: url(assets/Page\ principale/Images/HeaderMobile.jpg);
+        background-position: center;
+    }
+    .aProposImgCtnr{
+        flex-direction: column;
+    }
+    .aProposImgCtnrSmall{
+        flex-direction: row;
+        width: 100%;
+    }
+    .aProposImgCtnrSmall img{
+        width: 48%;
+        margin: 0 2px
+    }
+    .aProposImgBig{
+        width: calc(100% - 4px);
+        margin: 4px 0
+    }
+    .pres{
+        padding-top: 10vh
+    }
+    .pres > div{
+        flex-direction: column;
+    }
+    .presLeft, .presRight{
+        width: 100%
+    }
+    .presRight{
+        margin-top: 20px
+    }
+    .TrackList{
+        flex-direction: column;
+        padding: 10vh 0
+    }
+    .TrackListRight{
+        width: 100%
+    }
+    .TrackListShare span{
+        font-size: 3vw
+    }
+    .controlButtons{
+        height: 3vw;
+        width: 3vw
+    }
+    .audioTitre{
+        font-size: 2vw
+    }
+    .audio-player-info{
+        font-size: 2vw
+    }
+    .oneEvent{
+        width: 100%
+    }
+    .date{
+        font-size: 5vw
+    }
+    .lieu span{
+        font-size: 2.5vw
+    }
+    .pays{
+        font-size: 4vw;
+        width: 30%
+    }
+    .reserver{
+        font-size: 3vw
+    }
+
+    .news{
+        flex-direction: column
+    }
+    .newsSide{
+        width: 100%
+    }
+    .oneArticleTitle{
+        font-size: 4vw
+    }
+    .oneArticleDate{
+        font-size: 6vw
+    }
+    .oneArticleShare{
+        display: none;
+    }
+    footer a, footer p{
+        font-size: 3vw;
+        text-align: center;
+    }
+    footer div h6{
+        font-size: 4vw
+    }
+}

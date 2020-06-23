@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("../../assets/font/AvenirNextLT/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "MadeSoulMaze";
+    src: url("../../assets/font/MadeSoulMaze/MADE Soulmaze PERSONAL USE.otf") format("opentype");
+}
+
+:root {
+    --jaune: #e3ca30;
+    --noir: #202020;
+}
+body{
+    background-image: url(../../assets/Page\ Admininstration/Fond\ admin.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: AvenirNextLTPro;
+    color: white;
+    overflow-y: hidden;
+}
+.deco{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    
+}
+.button:hover{
+    background-color: white;
+    color: var(--jaune)
+}
+.button{
+    border: 2px solid var(--jaune);
+    text-transform: uppercase;
+    background-color: var(--jaune);
+    font-family: MadeSoulMaze;
+    color: white;
+    /* padding: 5px 15px; */
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 40px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-family: MadeSoulMaze;
+    color: var(--jaune);
+    text-transform: uppercase;
+    font-size: 5vw
+}
+.listeInput{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    height: 72vh;
+}
+.listeInput > *{
+    margin: 6px 0
+}
+
+.listeInput label{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    color: white
+}
+.listeInput input{
+    margin-top: 4px;
+    height: 24px;
+}
+.listeInput input:last-of-type{
+    height: 30px;
+}
+
+
+.listeTournée{
+    width: 75%;
+    height: max-content;
+    max-height: 72vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--jaune) rgba(0, 0, 0, 0)
+}
+.oneEvent{
+    width: 50%;
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3vh 0;
+    height: max-content;
+    border-bottom: 2px solid white
+}
+.date{
+    font-size: 2vw;
+    font-family: MadeSoulMaze;
+    text-align: center;
+}
+.lieu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.ville{
+
+    font-weight: 600;
+    font-size: 1.2vw
+}
+.batiment{
+    font-weight: 200;
+    font-size: 1.2vw
+}
+.pays{
+    font-weight: 600;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+}
+.sup{
+    cursor: pointer;
+    color: var(--jaune);
+    line-height: 1.1em;
+    padding: 0 4px;
+    height: 30px;
+}

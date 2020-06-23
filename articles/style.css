@@ -1,0 +1,107 @@
+
+@font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("../assets/font/AvenirNextLT/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "MadeSoulMaze";
+    src: url("../assets/font/MadeSoulMaze/MADE Soulmaze PERSONAL USE.otf") format("opentype");
+}
+
+:root {
+    --jaune: #e3ca30;
+    --noir: #202020;
+}
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: AvenirNextLTPro;
+    width: 100vw;
+    background-image: url(../assets/Page\ principale/Images/fondFooter.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+}
+header img{
+    width: 7vw;
+    margin: 2vh 4vw
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 11vh
+}
+
+.left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left h1{
+    font-family: MadeSoulMaze;
+    color: var(--jaune);
+    text-align: center;
+}
+.left p{
+    line-height: 1.4em;
+    font-size: 18px;
+    width: 100%
+}
+.left strong{
+    color: var(--jaune)
+}
+.left img{
+    width: 80%
+}
+
+.right{
+    width: 20%;
+    padding-top: 5vh
+}
+.rightArticle{
+    text-decoration: none
+}
+.rightArticle h3{
+    color: var(--jaune);
+    text-decoration: none;
+    line-height: 1.4;
+    margin: 0;
+    font-size: 17px
+}
+.rightArticle p{
+    color: white;
+    text-decoration: none;
+    margin: 1vh 0 2vh 0;
+    font-size: 13px;
+    padding: 0 0 2vh 0;
+    border-bottom: 1px solid white;
+}
+
+@media (max-width: 750px) {
+    .left{
+        width: 90%
+    }
+    .right{
+        width: 50%
+    }
+    main{
+        flex-direction: column;
+        align-items: center
+    }
+    header img{
+        width: 120px
+    }
+}

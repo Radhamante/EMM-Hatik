@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("../assets/font/AvenirNextLT/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "MadeSoulMaze";
+    src: url("../assets/font/MadeSoulMaze/MADE Soulmaze PERSONAL USE.otf") format("opentype");
+}
+
+:root {
+    --jaune: #e3ca30;
+    --noir: #202020;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+main{
+    background-image: url(../assets/Page\ Connexion/Fond\ -adminstration.png);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: MadeSoulMaze;
+    margin: 0;
+    color: var(--jaune);
+    font-size: 5vw
+}
+p{
+    font-family: AvenirNextLTPro;
+    margin: 0;
+    color: white;
+    font-size: 2vw
+}
+input{
+    width: 45vw;
+    height: 3vw;
+    padding: 1vw 2vw;
+    margin: 1vw;
+    font-size: 1.5vw
+}
+.button{
+    background-color: var(--jaune);
+    color: white;
+    border: none;
+    font-family: MadeSoulMaze;
+    font-size: 2vw;
+    height: 5vw;
+    cursor: pointer;
+    border: 0.2vw solid var(--jaune);
+    transition: 0.4s
+}
+.button:hover{
+    background-color: white;
+    color: black
+}
